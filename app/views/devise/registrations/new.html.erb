@@ -10,6 +10,10 @@
               <%= f.label :name, '名前' %><br />
               <%= f.text_field :name, autofocus: true %>
             </div>
+            <div class="form-group">
+              <%= f.label :height, '身長' %><br />
+              <%= f.number_field :height, step: "0.1", autofocus: true %>
+            </div>
             <div class="form-group ">
               <%= f.label :email, 'メールアドレス' %><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
