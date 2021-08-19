@@ -1,0 +1,43 @@
+.h1-a{
+  text-decoration: none;
+  color: #202124;
+  margin: 30px 0;
+}
+.h1-a:hover{
+  text-decoration: none;
+  color: #696969;
+}
+.boards__table {
+  margin: 30px 0;
+  tr:hover {
+    cursor: pointer;
+  }
+}
+.boards__linkBox {
+  a {
+    margin: 0 8px;
+  }
+}
+
+.boards__searchForm {
+  display: inline-block;
+}
+
+.boards__search {
+  display: inline-block;
+}
+.boards__select__search{
+  display: inline-block;
+  width: auto;
+}
+.boards__select {
+  display: inline-block;
+  width: auto;
+}
+.small-size{
+  text-align: center;
+  font-size: x-small;
+}
+.small_count{
+  font-size: x-small;
+}

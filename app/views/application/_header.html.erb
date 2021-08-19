@@ -1,0 +1,77 @@
+<div class="sidebar">
+  <div class="logo-details">
+    <i class='bx bx-message-dots'></i>
+    <span class="logo_name">EtApp</span>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <span class="a_span">
+        <i class='bx bx-home-smile'></i>
+        <%= link_to('ホーム', root_path, {class: "links_name" }) %>
+      </span>
+    </li>
+    <li>
+      <span class="a_span">
+        <i class='bx bx-list-ul'></i>
+        <%= link_to('質問一覧', boards_path, {class: "links_name" }) %>
+      </span>
+    </li>
+  <% if user_signed_in? %>
+    <li>
+      <span class="a_span">
+        <i class='bx bx-user'></i>
+        <%= link_to('マイページ', mypage_path, {class: "links_name" }) %>
+      </span>
+    </li>
+    <li>
+    <span class="a_span">
+      <i class='bx bx-body' ></i>
+      <%= link_to('体重管理', records_path, {class: "links_name" }) %>
+    </span>
+  </li>
+  <% else %>
+  <li>
+    <span class="a_span">
+      <i class='bx bx-log-in'></i>
+      <%= link_to('ログイン', new_user_session_path, {class: "links_name" }) %>
+    </span>
+  </li>
+  <li>
+    <span class="a_span">
+      <i class='bx bx-heart'></i>
+      <%= link_to('新規登録', new_user_registration_path, {class: "links_name" }) %>
+    </span>
+  </li>
+  <li>
+    <span class="a_span">
+      <i class='bx bx-smile'></i>
+    <%= link_to('ゲストログイン', users_guest_sign_in_path, class: 'links_name', method: :post) %>
+    </span>
+  </li>
+  <% end %>
+  <% if user_signed_in? %>
+    <li class="log_out">
+      <span class="a_span">
+        <i class='bx bx-log-out'></i>
+        <%= link_to('ログアウト', destroy_user_session_path, class: 'links_name', method: :delete) %>
+      </span>
+    </li>
+  <% end %>
+</ul>
+</div>
+<section class="home-section">
+  <nav class="home-section-nav">
+    <div class="sidebar-button">
+      <i class='bx bx-menu sidebarBtn'></i>
+      <% if user_signed_in? %>
+      <a class="profile-a" href="/mypage">
+      <span class="dashboard"><%= current_user.name %></span>
+      </a>
+      <% else %>
+      <span class="dashboard">Serpentinite</span>
+      <% end %>
+    </div>
+    <div class="logo_nav">
+    Eccentric Training Application
+    </div>
+  </nav>

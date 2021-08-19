@@ -1,0 +1,185 @@
+.train{
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+}
+.about{
+  text-align: center;
+  transform   : skewX(-22deg); 
+
+}
+.home-content{
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.home-content .overview-boxes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 26px;
+}
+.overview-boxes .box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 4 - 15px);
+  background: #fff;
+  padding: 15px 14px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.home-content .total-order{
+  font-size: 20px;
+  font-weight: 500;
+}
+.home-content .contents-boxes{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.myquestion{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #f7e6b9;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 1.1rem;
+    outline: 0;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.myquestion .title{
+    text-align: center;
+}
+/* left box */
+.home-content .contents-boxes .question-box{
+  width: 65%;
+  background: #b4b4b4;
+  padding: 5px 8px;
+  margin: 0 20px 0 0;
+  border-radius: 1.1rem;
+  box-shadow: 0 10px 20px #0000001a;
+}
+.home-content .contents-boxes .question-box .white{
+  display: -ms-flexbox;
+  padding: 20px 20px 72px 20px;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 1.1rem;
+  outline: 0;
+  max-width: 100%;
+}
+.question-box .boxContainer{
+  display: flex;
+}
+.box-talk{
+  position: relative;
+  margin: 2em 0 0 40px;
+  padding: 8px 15px;
+  background: #fff0c6;
+  border-radius: 30px;
+}
+.box-talk:before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900; 
+  content: "\f111";
+  position: absolute;
+  font-size: 15px;
+  left: -40px;
+  bottom: 0;
+  color: #fff0c6;
+}
+.box-talk:after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900; 
+  content: "\f111";
+  position: absolute;
+  font-size: 23px;
+  left: -23px;
+  bottom: 0;
+  color: #fff0c6;
+}
+.box-talk p {
+  margin: 0; 
+  padding: 0;
+}
+/* Right box */
+.home-content .contents-boxes .top-login{
+  width: 35%;
+  background: #b4b4b4;
+  padding: 5px 8px;
+  margin: 0 20px 0 0;
+  border-radius: 1.1rem;
+  box-shadow: 0 10px 20px #0000001a;
+}
+ h1,h2{
+ font-family: 'Kaushan Script', cursive;
+ }
+.myform{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 1.1rem;
+    outline: 0;
+    max-width: 500px;
+}
+.tx-tfm{
+text-transform:uppercase;
+}
+.mybtn{
+border-radius:50px;
+}
+.login-or {
+position: relative;
+color: #aaa;
+margin-top: 10px;
+margin-bottom: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+.login-margin {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.span-or {
+display: block;
+position: absolute;
+left: 50%;
+top: -2px;
+margin-left: -25px;
+background-color: #fff;
+width: 50px;
+text-align: center;
+}
+.hr-or {
+height: 1px;
+margin-top: 0px !important;
+margin-bottom: 0px !important;
+}
+#second{display:none;}

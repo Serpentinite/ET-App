@@ -1,0 +1,54 @@
+<div class="home-content">
+<p class="train">さあ始めよう！<p>
+<p class="about">~筋トレに関する情報を共有するアプリケーション~</p>
+<div class="contents-boxes">
+  <div class="question-box">
+  <div class="white">
+    <div class="myquestion">
+      <h3 class="title">筋トレに関する質問をしよう</h3>
+    </div>
+    <div class="boxContainer">
+    <div class="box-talk"><p>筋トレはどれくらいの頻度でやればいいんだろう？</p></div>
+    <div class="box-talk"><p>どうしたら効率よくダイエットできるだろう？</p></div>
+    <div class="box-talk"><p>プロテインは何を選べばいいんだろう？</p></div>
+    </div>
+    </div>
+  </div>
+  <div class="top-login">
+    <div class="myform">
+      <div class="col-md-12 text-center">
+        <h1>アカウント</h1>
+       </div>
+      <% if user_signed_in? %>
+        <div class="col-md-12 text-center ">
+          <%= link_to('ログアウト', destroy_user_session_path, class: 'btn btn-block mybtn btn-warning tx-tfm mt-4', method: :delete) %>
+        </div>
+        <div class="login-or">
+          <hr class="hr-or">
+          <span class="span-or">or</span>
+        </div>
+        <div class="login-margin"></div>
+        <div class="col-md-12 text-center ">
+          <%= link_to('マイページ', mypage_path, {class: "btn btn-block mybtn btn-info tx-tfm mb-3" }) %>
+        </div>
+      <% else %>
+        <div class="col-md-12 text-center ">
+          <%= link_to('新規登録', new_user_registration_path, {class: " btn btn-block mybtn btn-success tx-tfm" }) %>
+        </div>
+        <div class="login-or">
+          <hr class="hr-or">
+          <span class="span-or">or</span>
+        </div>
+        <div class="col-md-12 text-center ">
+          <%= link_to('ログイン', new_user_session_path, {class: "btn btn-block mybtn btn-primary tx-tfm" }) %>
+        </div>
+        <div class="login-margin"></div>
+        <div class="col-md-12 text-center ">
+          <%= link_to('ゲストログイン', users_guest_sign_in_path, class: 'btn btn-block mybtn btn-warning tx-tfm', method: :post) %>
+        </div>      
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

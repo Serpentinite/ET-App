@@ -1,0 +1,17 @@
+<div class="p-comment__item">
+  <p><%= simple_format(comment.comment) %></p>
+  <div class="p-comment__bottomLine">
+  <% if user_signed_in? %>
+    <% if comment.favorites.where(user_id: current_user.id).exists? %>
+      <p><span>解除: </span><%=link_to comment.favorites.count, comment_favorites_path(comment.id), method: :delete ,class: 'bx bxs-like bx-tada-hover favorite-btn-danger' %></p>
+    <% else %>
+      <p><span>役に立った: </span><%=link_to comment.favorites.count, comment_favorites_path(comment.id), method: :post  ,class: 'bx bxs-like bx-tada-hover favorite-btn'%></p>
+    <% end %>
+  <% end %>
+    <span><%= comment.user.name %></span>
+    <span><%= comment.created_at.to_s(:datetime_jp) %></span>
+    <% if user_signed_in? && current_user.id == comment.user_id %>
+    <span><%= link_to '削除', comment, method: :delete, data: { confirm: '削除してもよろしいでしょうか?'}  ,class: 'bx bxs-trash danger-btn'%></span>
+    <% end %>
+  </div>
+</div>

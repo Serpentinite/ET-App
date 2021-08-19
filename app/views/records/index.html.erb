@@ -1,0 +1,41 @@
+<%= render 'shared/error_messages' %>
+<h1>体重の管理</h1>
+<%= form_for @record do |f| %>
+<div class="form-group">
+  <%= f.label :day, '日付:',class: 'mr-2'%>
+  <%= f.date_select :day, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.label :weight, '体重入力:', class: 'mr-2' %>
+  <%= f.number_field :weight, step: "0.1" , class: 'form-control mr-2' %>
+</div>
+<%= f.submit '保存', class: 'btn btn-primary' %>
+<% end %>
+<div class="hidden_box">
+<input type="checkbox" id="label1" />
+<label for="label1">グラフ</label>
+<div class="hidden_show">
+<%= line_chart @data.group_by_day(:day, series: false ).average(:weight), curve: false, xtitle: "日付", ytitle: "体重", discrete: true %>
+</div>
+</div>
+<table class="table table-hover boards__table">
+  <thead class="table-info">
+    <tr>
+      <th>測定日</th>
+      <th>体重</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @records.each do |record| %>
+      <tr>
+        <td><%= record.day.to_s(:date) %></td>
+        <td><%= record.weight %>kg</td>
+        <td><%= link_to '削除', record, method: :delete ,class: 'bx bxs-trash trash-btn' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= paginate @records %>

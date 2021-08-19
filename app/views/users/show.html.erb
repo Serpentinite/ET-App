@@ -1,0 +1,43 @@
+<h1>マイページ</h1>
+<span class="account_span">
+<div class="btn btn-warning">
+<i class='bx bxs-brightness'></i>
+<%= link_to('アカウント編集', edit_user_registration_path, {class: "account" }) %>
+</div>
+</span>
+<div class="table_user">
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th><h3>ユーザー名</h3></th>
+                <td><%= @user.name %></td>
+            </tr>
+            <tr>
+                <th><h3>メールアドレス</h3></th>
+                <td><%= @user.email %></td>
+            </tr>
+            <tr>
+                <th><h3>身長</h3></th>
+                <% if @user.height.present? %>
+                    <td><%= @user.height %></td>
+                <% else %>
+                    <td class="attend">身長を入力してください</td>
+                <% end %>
+            </tr>
+            <% @records.each do |record| %>
+            <tr>
+                <th><h3>体重</h3></th>
+                <td><%= record.weight %></td>
+            </tr>
+            <tr>
+                <th><h3>BMI</h3></th>
+                <% if @user.height.present? %>
+                    <td><%= (record.weight / ((@user.height / 100) ** 2)).round(1)%></td>
+                <% else %>
+                    <td>0</td>
+                <% end %>
+            </tr>
+            <% end %>
+        </tbody
+    </table>
+</div>
