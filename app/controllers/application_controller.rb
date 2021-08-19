@@ -12,7 +12,8 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     # サインアップの時にnameのストロングパラメータを追加
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-    # アカウント編集の時にnameのストロングパラメータを追加
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:height])
+    # アカウント編集の時にnameとheightのストロングパラメータを追加
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
     devise_parameter_sanitizer.permit(:account_update, keys: [:height])
   end
