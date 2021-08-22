@@ -9,6 +9,8 @@ services:
       - public-data:/app/public
       - tmp-data:/app/tmp
       - log-data:/app/log
+    networks:
+      - app-network
 
   web:
     build:
@@ -20,6 +22,8 @@ services:
       - 80:80
     depends_on:
       - app
+    networks:
+      - app-network
 
 volumes:
   public-data:
