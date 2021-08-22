@@ -5,4 +5,5 @@ WORKDIR /app
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
+RUN bundle exec rails assets:precompile
 COPY . /app
