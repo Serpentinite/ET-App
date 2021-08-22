@@ -30,3 +30,7 @@ volumes:
   tmp-data:
   log-data:
   db-data:
+
+networks:
+  fitO2-network:
+    external: true
