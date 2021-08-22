@@ -32,5 +32,5 @@ volumes:
   db-data:
 
 networks:
-  fitO2-network:
+  app-network:
     external: true
