@@ -5,10 +5,10 @@ services:
       context: .
     command: bundle exec puma -C config/puma.rb -e production
     volumes:
-      - .:/ET-App
-      - public-data:/ET-App/public
-      - tmp-data:/ET-App/tmp
-      - log-data:/ET-App/log
+      - .:/app
+      - public-data:/app/public
+      - tmp-data:/app/tmp
+      - log-data:/app/log
     networks:
       - app-network
 
@@ -16,8 +16,8 @@ services:
     build:
       context: ./nginx_docker
     volumes:
-      - public-data:/ET-App/public
-      - tmp-data:/ET-App/tmp
+      - public-data:/app/public
+      - tmp-data:/app/tmp
     ports:
       - 80:80
     depends_on:
