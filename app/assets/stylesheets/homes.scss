@@ -130,6 +130,9 @@
  h1,h2{
  font-family: 'Kaushan Script', cursive;
  }
+ h3{
+   font-family: 'Kaushan Script', cursive;
+ }
 .myform{
     position: relative;
     display: -ms-flexbox;
@@ -145,6 +148,7 @@
     border-radius: 1.1rem;
     outline: 0;
     max-width: 500px;
+    padding-bottom: 85px;
 }
 .tx-tfm{
 text-transform:uppercase;
@@ -183,3 +187,21 @@ margin-top: 0px !important;
 margin-bottom: 0px !important;
 }
 #second{display:none;}
+
+
+@media (max-width: 1200px){
+  .home-content .contents-boxes .top-login .myform{
+    padding-bottom: 117px;
+}
+}
+@media (max-width: 1150px) {
+  .home-content .contents-boxes .question-box{
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-content .contents-boxes .top-login{
+    margin-left: auto;
+    margin-right: auto
+  }
+}
