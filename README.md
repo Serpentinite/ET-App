@@ -1,24 +1,47 @@
-# README
+# ET-App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+ポートフォリオ用のwebアプリケーションです。
 
-Things you may want to cover:
+## 説明
+コロナ禍で自宅トレーニングをすることが増え、トレーニングジムでの情報収集や情報共有が減ったと思います。そこで、情報共有をするためのナレッジコミュニティを作ろうと考えてこのテーマにしました。
+また、トレーニングにおいて体重の管理は重要な項目だと考え、体重の管理機能も実装しています。
 
-* Ruby version
+## バージョン
+Ruby 2.4.5
+Rails 5.0.7
 
-* System dependencies
+# 実装機能
 
-* Configuration
+## 投稿関連
+* 一覧表示機能
+* 詳細表示機能
+* 削除機能
+* 編集機能
+* タイトル検索機能
+* タグ検索機能
 
-* Database creation
+## コメント関連
+* 投稿機能
+* 削除機能
+* 「役に立った」機能
 
-* Database initialization
+## ユーザ関連
+* 登録機能
+* 編集機能
+* ログイン・ログアウト
+* ゲストユーザ機能
 
-* How to run the test suite
+## 体重記録関連
+* 体重入力機能
+* 削除機能
+* グラフ化(chartkick)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# その他
+* Dockerによる環境構築
+* Rspec、Capybaraによる簡易的なテストの導入
+* CircleCiによる自動テスト
+## インフラ関連(AWS)
+* VPC
+* EC2
+* RDS
