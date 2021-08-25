@@ -4,26 +4,18 @@ orbs:
   ruby: circleci/ruby@1.1.2
   node: circleci/node@2
 
-# setup
-commands:
-  setup:
-    steps:
-      - checkout
-      - ruby/install-deps
-      - node/install-packages:
-          pkg-manager: yarn
-          cache-key: "yarn.lock"
-
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7-node
+      - image: circleci/ruby:2.4-node
     working_directory: ~/ET-App
     steps:
-      - setup
+      - checkout:
+          path: ~/ET-App
+      - ruby/install-deps
   test:
     docker:
-      - image: circleci/ruby:2.7-node
+      - image: circleci/ruby:2.4-node
       - image: circleci/mysql:5.5
         environment:
           MYSQL_ROOT_PASSWORD: password
