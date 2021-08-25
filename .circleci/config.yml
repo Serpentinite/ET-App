@@ -28,7 +28,9 @@ jobs:
       RAILS_ENV: test
     working_directory: ~/ET-App
     steps:
-      - setup
+      - checkout:
+          path: ~/ET-App
+      - ruby/install-deps
       - run:
           name: rails db:migrate
           command: bundle exec rails db:migrate
