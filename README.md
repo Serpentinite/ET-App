@@ -45,3 +45,6 @@ Rails 5.0.7
 * VPC
 * EC2
 * RDS
+
+## ER図
+![ET-App-ERD](https://user-images.githubusercontent.com/83485205/131245061-67049b89-ead3-4021-906e-cb0405c729a9.png)
