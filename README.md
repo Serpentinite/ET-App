@@ -38,7 +38,7 @@ Rails 5.0.7
 * グラフ化(chartkick)
 
 ## ER図
-![ET-App-ERD](https://user-images.githubusercontent.com/83485205/131245061-67049b89-ead3-4021-906e-cb0405c729a9.png)
+![erd-et-app](https://user-images.githubusercontent.com/83485205/131293062-8e2f5300-e485-4a54-a241-bb22e5858a9d.png)
 
 # その他
 * Dockerによる環境構築
