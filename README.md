@@ -51,7 +51,7 @@ Rails 5.0.7
 * RDS
 
 ## アプリの説明資料
-![スクリーンショット 2023-07-09 12 04 12](https://github.com/Serpentinite/ET-App/assets/83485205/2bce9e84-a862-4735-9973-28f266f95699)
+![スクリーンショット 2023-07-09 12 04 05](https://github.com/Serpentinite/ET-App/assets/83485205/e3e7101d-7cba-47fa-b64e-1951c33ee280)
 ![スクリーンショット 2023-07-09 12 04 12](https://github.com/Serpentinite/ET-App/assets/83485205/be4897d5-84e4-4db9-bc62-c3bf52482c3c)
 ![スクリーンショット 2023-07-09 12 04 22](https://github.com/Serpentinite/ET-App/assets/83485205/446a3bca-47ee-47d2-9028-7b1b7654475e)
 
